@@ -12,18 +12,20 @@
 }
 
 .schedule_title {
-  font-family: var(--font-accent);
-  font-size: 64px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: var(--color-dark);
+  font-family: 'New Yorker', serif;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: 0.7%;
+  font-weight: 400;
+  color: #637D61;
+  margin: 0;
 }
 
 .schedule_note {
   font-size: 16px;
   line-height: 1.5;
   color: rgba(31, 31, 31, 0.6);
-  text-align: right;
+  text-align: left;
   max-width: 400px;
 }
 
