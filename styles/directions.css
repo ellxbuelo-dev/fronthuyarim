@@ -1,3 +1,11 @@
+:root {
+  --color-bg: #FEFBF7;
+  --color-dark: #1F1F1F;
+  --color-green: #789776;
+  --color-white: #FFFFFF;
+}
+
+
 .directions {
   padding: 120px 0;
   background-color: var(--color-bg);
@@ -12,11 +20,14 @@
 }
 
 .directions_title {
-  font-family: var(--font-accent);
-  font-size: 64px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: var(--color-dark);
+  font-family: 'New Yorker', serif;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: 0.7%;
+  width: 650px;
+  font-weight: 400;
+  color: #637D61;
+  margin: 0;
 }
 
 .directions_hint {
