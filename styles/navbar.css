@@ -20,22 +20,46 @@
 }
 
 .navbar_logo_text {
-  font-family: var(--font-accent);
-  font-size: 24px;
+  font-family: "Bookman Old Style", serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: #789776;
+  margin-left: -3px;
 }
 
 .navbar_list {
   display: flex;
-  gap: 40px;
+  gap: 26px;
 }
 
 .navbar_link {
-  font-size: 16px;
-  font-weight: 400;
-  transition: color 0.3s;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 13px; /* было 16px */
+  line-height: 1; /* 100% */
+  letter-spacing: 0.05em; /* 5% */
+  text-transform: uppercase; /* Case: Uppercase */
+  color: #5B6158; /* color text */
+  text-decoration: none;
+  
+  /* Вертикальное выравнивание */
+  display: inline-block;
+  vertical-align: bottom; /* Vertical alignment: Bottom */
+  
+  /* Размеры из макета (для ссылки "Программы") */
+  width: 90px; /* возможно для всех ссылок разная ширина */
+  height: 12.46px; /* высота текста */
+  
+  /* Для центрирования текста */
+  text-align: center;
+  
+  /* Transition для hover эффекта */
+  transition: color 0.3s ease;
 }
+
 
 .navbar_link:hover {
   color: rgba(31, 31, 31, 0.6);

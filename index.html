@@ -41,11 +41,11 @@
 
         <nav class="navbar_nav" aria-label="Основная навигация">
           <ul class="navbar_list">
-            <li class="navbar_item"><a class="navbar_link" href="#directions">Программы</a></li>
-            <li class="navbar_item"><a class="navbar_link" href="#prices">Прайс</a></li>
-            <li class="navbar_item"><a class="navbar_link" href="#schedule">Расписание</a></li>
-            <li class="navbar_item"><a class="navbar_link" href="#reviews">Отзывы</a></li>
-            <li class="navbar_item"><a class="navbar_link" href="#map">Контакты</a></li>
+            <li class="navbar_item"><a class="navbar_link" href="#directions">ПРОГРАММЫ</a></li>
+            <li class="navbar_item"><a class="navbar_link" href="#prices">ПРАЙС</a></li>
+            <li class="navbar_item"><a class="navbar_link" href="#schedule">РАСПИСАНИЕ</a></li>
+            <li class="navbar_item"><a class="navbar_link" href="#reviews">ОТЗЫВЫ</a></li>
+            <li class="navbar_item"><a class="navbar_link" href="#map">КОНТАКТЫ</a></li>
           </ul>
         </nav>
 
@@ -535,128 +535,43 @@
         </div>
     </section>
 
-    <footer class="footer" id="footer">
-        <div class="container">
-            <div class="footer_top">
-                <div class="footer_contacts">
-                    <p class="footer_contacts_item">Адрес: г. Томск, Варшавское шоссе 26</p>
-                    <p class="footer_contacts_item">
-                        Tel:
-                        <a class="footer_link" href="tel:+79244447777">+7 (924) 444-77-77</a>
-                    </p>
-                    <p class="footer_contacts_item">
-                        Email:
-                        <a class="footer_link" href="mailto:balans@mail.ru">balans@mail.ru</a>
-                    </p>
-                </div>
-                <nav class="footer_nav" aria-label="Навигация в подвале">
-                  <ul class="footer_nav_list">
-                    <li><a class="footer_nav_link" href="#home">Главная</a></li>
-                    <li><a class="footer_nav_link" href="#directions">Направления</a></li>
-                    <li><a class="footer_nav_link" href="#prices">Прайс</a></li>
-                    <li><a class="footer_nav_link" href="#schedule">Расписание</a></li>
-                    <li><a class="footer_nav_link" href="#coaches">Эксперты</a></li>
-                    <li><a class="footer_nav_link" href="#reviews">Отзывы</a></li>
-                    <li><a class="footer_nav_link" href="#connection">FAQ</a></li>
-                    <li><a class="footer_nav_link" href="#map">Контакты</a></li>
-                  </ul>
-                </nav>
-                <div class="footer_social">
-                    <a class="footer_social_link" href="#" aria-label="ВКонтакте">
-                        <img src="assets/footer_vk.svg" alt="" aria-hidden="true">
-                    </a>
-                    <a class="footer_social_link" href="#" aria-label="WhatsApp">
-                        <img src="assets/footer_whatsapp.svg" alt="" aria-hidden="true">
-                    </a>
-                    <a class="footer_social_link" href="#" aria-label="Telegram">
-                        <img src="assets/footer_telegram.svg" alt="" aria-hidden="true">
-                    </a>
-                </div>
-            </div>
-            <div class="footer_bottom">
-                <a class="footer_policy_left" href="#">
-                    Согласие на обработку персональных данных
-                </a>
-                <a class="footer_logo" href="#home" aria-label="BALANCE — на главную">
-                    <img
-                        class="footer_logo_icon"
-                        src="assets/logo_mark.svg"
-                        alt=""
-                        aria-hidden="true"
-                        width="86"
-                        height="86"
-                    >
-                    <span class="footer_logo_text">BALANCE</span>
-                </a>
-                <a class="footer_policy_right" href="#">
-                    Политика конфиденциальности
-                </a>
-            </div>
+    <footer class="footer">
+    <div class="footerMainContainer">
+      <div class="footerUP">
+        <div class="footerLeftTexts">
+          <p>Адрес: г.Томск, Варшавское шоссе 26</p>
+          <p>Тел: +7(924)444-77-77</p>
+          <p>Email: balans@mail.ru</p>
         </div>
-    </footer>
-  </main>
 
-  <div class="modal_overlay" id="modal_overlay">
-    <div class="modal" id="modal">
-      <button class="modal_close" type="button" aria-label="Закрыть">×</button>
-      <div class="modal_header">
-        <h3 class="modal_title">Запись на занятие</h3>
+        <nav class="footerUpButtons">
+          <a href="#" class="upButton">Главная</a>
+          <a href="#" class="upButton">Направления</a>
+          <a href="#" class="upButton">Прайс</a>
+          <a href="#" class="upButton">Расписание</a>
+          <a href="#" class="upButton">Эксперты</a>
+          <a href="#" class="upButton">Отзывы</a>
+          <a href="#" class="upButton">FAQ</a>
+          <a href="#" class="upButton">Контакты</a>
+        </nav>
+
+        <div class="footerRightSoc">
+          <a href="#" class="VK">VK</a>
+          <a href="#" class="WHATS">WA</a>
+          <a href="#" class="TELEGRAM">TG</a>
+        </div>
       </div>
-      <form class="modal_form" id="modal_form">
-        <div class="modal_info">
-          <div class="modal_info_item">
-            <span class="modal_info_label">Занятие:</span>
-            <span class="modal_info_value" id="modal_class_name">Хатха-йога</span>
-          </div>
-          <div class="modal_info_item">
-            <span class="modal_info_label">Время:</span>
-            <span class="modal_info_value" id="modal_class_time">8:00</span>
-          </div>
-          <div class="modal_info_item">
-            <span class="modal_info_label">Инструктор:</span>
-            <span class="modal_info_value" id="modal_class_trainer">Ирина Беляева</span>
-          </div>
-        </div>
-        <div class="modal_field">
-          <label class="modal_label" for="modal_phone">Номер телефона *</label>
-          <input 
-            class="modal_input" 
-            type="tel" 
-            id="modal_phone" 
-            name="phone" 
-            placeholder="+7 (___) ___-__-__"
-            required
-          >
-          <div class="modal_error" id="modal_phone_error"></div>
-        </div>
-        <div class="modal_field">
-          <label class="modal_label" for="modal_name">Ваше имя</label>
-          <input 
-            class="modal_input" 
-            type="text" 
-            id="modal_name" 
-            name="name" 
-            placeholder="Иван Иванов"
-          >
-        </div>
-        <div class="modal_agreement">
-          <label class="modal_checkbox_label">
-            <input 
-              class="modal_checkbox" 
-              type="checkbox" 
-              name="agreement" 
-              required
-            >
-            <span class="modal_checkbox_text">
-              Я согласен на обработку персональных данных
-            </span>
-          </label>
-        </div>
-        <button class="modal_submit" type="submit">ЗАПИСАТЬСЯ</button>
-      </form>
-    </div>
-  </div>
 
+      <div class="footerDOWN">
+        <span class="footerPerDan">Согласие на обработку персональных данных</span>
+        <div class="footerContBalance">
+            <img src="image.png" alt="hernyaPoCentru" class="footerBalancePng">
+            <span class="balancetext">BALANCE</span>
+        </div>
+        <a href="#" class="footerPolitika">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
   <script src="scripts/script.js"></script>
 </body>
 </html>
