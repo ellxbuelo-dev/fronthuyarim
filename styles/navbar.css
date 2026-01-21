@@ -1,0 +1,71 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0;
+  z-index: 100;
+}
+
+.navbar_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar_logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar_logo_text {
+  font-family: var(--font-accent);
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navbar_list {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar_link {
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.navbar_link:hover {
+  color: rgba(31, 31, 31, 0.6);
+}
+
+.navbar_phone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar_phone_icon_wrapper {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.navbar_phone:hover .navbar_phone_icon_wrapper {
+  background: var(--color-dark);
+}
+
+.navbar_phone:hover .navbar_phone_icon {
+  filter: invert(1);
+}
+
+.navbar_burger {
+  display: none;
+}

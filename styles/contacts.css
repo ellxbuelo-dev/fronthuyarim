@@ -1,0 +1,243 @@
+.contacts {
+  padding: 120px 0;
+  background-color: var(--color-bg);
+}
+
+.contacts_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.contacts_title {
+  font-family: var(--font-accent);
+  font-size: 64px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.contacts_form {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contacts_field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.contacts_label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(31, 31, 31, 0.6);
+}
+
+.contacts_input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(31, 31, 31, 0.2);
+  background: transparent;
+  padding: 10px 0;
+  font-family: var(--font-main);
+  font-size: 16px;
+  color: var(--color-dark);
+  transition: border-color 0.3s ease;
+  border-radius: 0; 
+}
+
+.contacts_input:focus {
+  outline: none;
+  border-bottom-color: var(--color-dark);
+}
+
+.contacts_input::placeholder {
+  opacity: 0;
+}
+
+.contacts_policy {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.contacts_checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 31, 31, 0.4);
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.contacts_checkbox:checked {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
+.contacts_checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 5px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.contacts_policy_text {
+  font-size: 12px;
+  color: rgba(31, 31, 31, 0.6);
+  line-height: 1.4;
+}
+
+.contacts_button {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1px solid var(--color-dark);
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contacts_button:hover {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.contacts_map {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.contacts_map_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contacts_card {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contacts_info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.contacts_info_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.contacts_info_icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contacts_info_icon_phone {
+  background-image: url('../assets/icon_phone.svg');
+}
+
+.contacts_info_icon_location {
+  background-image: url('../assets/icon_location.svg');
+}
+
+.contacts_info_icon_email {
+  background-image: url('../assets/icon_mail.svg');
+}
+
+.contacts_info_link,
+.contacts_info_text {
+  font-size: 18px;
+  color: var(--color-dark);
+  line-height: 1.4;
+  transition: opacity 0.3s;
+}
+
+.contacts_info_link:hover {
+  opacity: 0.7;
+}
+
+.contacts_social {
+  display: flex;
+  gap: 15px;
+}
+
+.contacts_social_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(31, 31, 31, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.contacts_social_link:hover {
+  border-color: var(--color-dark);
+  background-color: var(--color-dark);
+}
+
+.contacts_social_icon {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.contacts_social_link:hover .contacts_social_icon {
+  filter: invert(1);
+}
+
+.contacts_social_icon_vk {
+  background-image: url('../assets/footer_vk.svg');
+}
+
+.contacts_social_icon_whatsapp {
+  background-image: url('../assets/footer_whatsapp.svg');
+}
+
+.contacts_social_icon_telegram {
+  background-image: url('../assets/footer_telegram.svg');
+}

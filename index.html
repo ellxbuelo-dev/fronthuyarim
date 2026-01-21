@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Йога+Пилатес</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/background.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/intro.css">
+  <link rel="stylesheet" href="styles/directions.css">
+  <link rel="stylesheet" href="styles/prices.css">
+  <link rel="stylesheet" href="styles/schedule.css">
+  <link rel="stylesheet" href="styles/coaches.css">
+  <link rel="stylesheet" href="styles/reviews.css">
+  <link rel="stylesheet" href="styles/connection.css">
+  <link rel="stylesheet" href="styles/contacts.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/modal.css">
+</head>
+
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar_inner">
+        <a class="navbar_logo" href="#home" aria-label="BALANCE — на главную">
+          <img
+            class="navbar_logo_icon"
+            src="assets/Vector.svg"
+            width="50"
+            height="50"
+            alt=""
+            aria-hidden="true"
+          >
+          <span class="navbar_logo_text">BALANCE</span>
+        </a>
+
+        <nav class="navbar_nav" aria-label="Основная навигация">
+          <ul class="navbar_list">
+            <li class="navbar_item"><a class="navbar_link" href="#directions">Программы</a></li>
+            <li class="navbar_item"><a class="navbar_link" href="#prices">Прайс</a></li>
+            <li class="navbar_item"><a class="navbar_link" href="#schedule">Расписание</a></li>
+            <li class="navbar_item"><a class="navbar_link" href="#reviews">Отзывы</a></li>
+            <li class="navbar_item"><a class="navbar_link" href="#map">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <a class="navbar_phone" href="tel:+79244447777" aria-label="Позвонить: +7 (924) 444-77-77">
+          <div class="navbar_phone_icon_wrapper">
+             <img class="navbar_phone_icon" src="assets/icon_phone.svg" width="18" height="18" alt="" aria-hidden="true">
+          </div>
+          <span class="navbar_phone_text">+7 (924) 444-77-77</span>
+        </a>
+
+        <button class="navbar_burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span class="navbar_burger_lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="home">
+      <div class="container">
+        <div class="home_inner">
+          <div class="home_content">
+            <h1 class="home_title">СТУДИЯ ЙОГИ<br>И ПИЛАТЕСА</h1>
+
+            <p class="home_description">
+              Здесь мы поможем вам держать<br>
+              тело в тонусе, а душу — в гармонии.
+            </p>
+
+            <button class="home_button" type="button">
+                <span>ЗАПИСАТЬСЯ</span>
+            </button>
+
+            <div class="home_bottom">
+              <div class="home_thumb_wrapper">
+                <img class="home_thumb_img" src="assets/home_thumb.jpg" alt="Превью">
+              </div>
+
+              <div class="home_features">
+                <div class="home_feature">
+                  <span class="home_feature_number">6</span>
+                  <span class="home_feature_text">направлений<br>в одном абонементе</span>
+                </div>
+
+                <div class="home_feature">
+                  <span class="home_feature_number">4</span>
+                  <span class="home_feature_text">тренера с большим<br>практическим опытом</span>
+                </div>
+
+                <div class="home_feature">
+                  <span class="home_feature_number">2</span>
+                  <span class="home_feature_text">просторных зала<br>для занятий</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="home_visual">
+            <img class="home_flower" src="assets/home_flower.svg" alt="" aria-hidden="true">
+
+            <div class="home_picture" aria-label="Слайдер">
+              <div class="home_image_wrapper">
+                <ul class="home_slides" id="home_slides">
+                  <li class="home_slide home_slide_active">
+                    <img class="home_image" src="assets/home_slide_1.jpg" alt="Йога">
+                  </li>
+                  <li class="home_slide">
+                    <img class="home_image" src="assets/home_slide_2.jpg" alt="Пилатес">
+                  </li>
+                  <li class="home_slide">
+                    <img class="home_image" src="assets/home_slide_3.jpg" alt="Медитация">
+                  </li>
+                </ul>
+              </div>
+
+              <div class="home_nav">
+                <button class="home_arrow home_arrow_prev" id="prevBtn" type="button" aria-label="Предыдущий слайд"></button>
+                
+                <div class="home_status">
+                    <span class="home_counter" id="home_counter">1/3</span>
+                    <div class="home_status_line">
+                        <span class="home_status_fill" id="home_status_fill"></span>
+                    </div>
+                </div>
+
+                <button class="home_arrow home_arrow_next" id="nextBtn" type="button" aria-label="Следующий слайд"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="directions" class="directions">
+      <div class="container">
+        <div class="directions_header">
+          <h2 class="directions_title">
+            ВСЕ НАПРАВЛЕНИЯ В ОДНОМ<br>
+            АБОНЕМЕНТЕ
+          </h2>
+          <p class="directions_hint">
+            Не определились с направлением?<br>
+            Мы подскажем!
+          </p>
+        </div>
+
+        <div class="directions_inner">
+          <div class="directions_tabs" role="tablist" aria-label="Выбор направления">
+            <button class="directions_tab" type="button" role="tab" aria-selected="false">Кундалини-йога</button>
+            <button class="directions_tab" type="button" role="tab" aria-selected="false">Хатха-йога</button>
+            <button class="directions_tab" type="button" role="tab" aria-selected="false">Пилатес</button>
+            <button class="directions_tab directions_tab_active" type="button" role="tab" aria-selected="true">Здоровая спина</button>
+            <button class="directions_tab" type="button" role="tab" aria-selected="false">Флоу-йога</button>
+            <button class="directions_tab" type="button" role="tab" aria-selected="false">Стретчинг</button>
+          </div>
+
+          <div class="directions_visual" aria-hidden="true">
+            <img class="directions_flower" src="assets/directions_flower.svg" alt="">
+            <div class="directions_image_wrapper">
+              <img class="directions_image" src="assets/directions-main.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="directions_content" role="tabpanel" aria-label="Описание направления">
+            <h3 class="directions_name">Здоровая спина</h3>
+
+            <ul class="directions_meta">
+              <li class="directions_meta_item">
+                <img class="directions_meta_icon" src="assets/icon_calendar.svg" alt="" aria-hidden="true">
+                <span class="directions_meta_text">Проходит по: пн, ср, пт</span>
+              </li>
+
+              <li class="directions_meta_item">
+                <img class="directions_meta_icon" src="assets/icon_clock.svg" alt="" aria-hidden="true">
+                <span class="directions_meta_text">Длительность: 60 мин</span>
+              </li>
+            </ul>
+
+            <div class="directions_description">
+              <p>
+                Занятия ориентированы на гармоничное развитие тела. Регулярное выполнение упражнений
+                формирует мышечный корсет, удерживающий позвоночник.
+              </p>
+              <p>
+                Способствует улучшению осанки, координации движений, снижению веса благодаря нормализации
+                лимфотока. Снимается психоэмоциональное напряжение.
+              </p>
+            </div>
+
+            <div class="directions_slider" aria-label="Навигация по направлениям">
+              <div class="directions_slider_controls">
+                <button class="directions_slider_button directions_slider_button_prev" type="button" aria-label="Предыдущее направление"></button>
+                <button class="directions_slider_button directions_slider_button_next" type="button" aria-label="Следующее направление"></button>
+              </div>
+
+              <div class="directions_progress" aria-hidden="true">
+                <span class="directions_progress_fill"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prices" class="prices">
+      <div class="container">
+        <div class="prices_header">
+          <h2 class="prices_title">
+            СТОИМОСТЬ НАШИХ<br>
+            ТРЕНИРОВОК
+          </h2>
+
+          <div class="prices_note">
+            <p>
+              После покупки абонемента его необходимо активировать в течение трех месяцев
+              с момента приобретения (дата активации — первое занятие).
+            </p>
+            <p>Первая тренировка для новых клиентов бесплатная</p>
+          </div>
+        </div>
+
+        <div class="prices_inner">
+          <div class="prices_column">
+            <div class="price_card">
+              <div class="price_value">800₽</div>
+              <div class="price_divider"></div>
+              <div class="price_description">1 занятие</div>
+            </div>
+            <button class="prices_button" type="button">ЗАПИСАТЬСЯ</button>
+          </div>
+
+          <div class="prices_column">
+            <div class="price_card">
+              <div class="price_meta">
+                <span class="price_meta_number">4</span>
+                <span class="price_meta_text">занятия<br>в месяц</span>
+              </div>
+              <div class="price_value">3000₽</div>
+              <div class="price_divider"></div>
+              <div class="price_subvalue">1 занятие — 750₽</div>
+            </div>
+            <div class="price_card">
+              <div class="price_meta">
+                <span class="price_meta_number">12</span>
+                <span class="price_meta_text">занятий<br>в месяц</span>
+              </div>
+              <div class="price_value">6600₽</div>
+              <div class="price_divider"></div>
+              <div class="price_subvalue">1 занятие — 550₽</div>
+            </div>
+          </div>
+
+          <div class="prices_column">
+            <div class="price_card">
+              <div class="price_meta">
+                <span class="price_meta_number">8</span>
+                <span class="price_meta_text">занятий<br>в месяц</span>
+              </div>
+              <div class="price_value">5200₽</div>
+              <div class="price_divider"></div>
+              <div class="price_subvalue">1 занятие — 650₽</div>
+            </div>
+            <div class="price_card">
+              <div class="price_meta">
+                <span class="price_meta_text">безлимит<br>на месяц</span>
+              </div>
+              <div class="price_value">8000₽</div>
+              <div class="price_divider"></div>
+              <div class="price_subvalue">1 занятие — зависит от вашей активности</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="schedule">
+      <div class="container">
+        <div class="schedule_header">
+          <h2 class="schedule_title">
+            НАЙДИТЕ СВОЮ ПРАКТИКУ<br>
+            В НАШЕМ РАСПИСАНИИ
+          </h2>
+          <p class="schedule_note">
+            Приглашаем на первое пробное занятие <strong>БЕСПЛАТНО!</strong><br>
+            Не упустите возможность попробовать что-то новое<br>
+            и полезное для вашего здоровья.
+          </p>
+        </div>
+
+        <div class="schedule_inner">
+          <div class="schedule_left">
+            <div class="schedule_tabs" role="tablist" aria-label="Дни недели">
+              <button class="schedule_tab schedule_tab_active" type="button" role="tab" aria-selected="true" data-day="monday">Понедельник</button>
+              <button class="schedule_tab" type="button" role="tab" aria-selected="false" data-day="tuesday">Вторник</button>
+              <button class="schedule_tab" type="button" role="tab" aria-selected="false" data-day="wednesday">Среда</button>
+              <button class="schedule_tab" type="button" role="tab" aria-selected="false" data-day="thursday">Четверг</button>
+              <button class="schedule_tab" type="button" role="tab" aria-selected="false" data-day="friday">Пятница</button>
+              <button class="schedule_tab" type="button" role="tab" aria-selected="false" data-day="saturday">Суббота</button>
+            </div>
+            <div class="schedule_table" role="tabpanel" aria-label="Список занятий">
+              <div class="schedule_rows" id="schedule_rows"></div>
+            </div>
+          </div>
+          <div class="schedule_right">
+            <div class="schedule_image_wrapper">
+              <img class="schedule_image" src="assets/schedule.jpg" alt="Инвентарь для занятий йогой">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="coaches" class="coaches">
+      <div class="container">
+        <div class="coaches_header">
+          <h2 class="coaches_title">
+            ЭКСПЕРТЫ В ОБЛАСТИ<br>
+            ТЕЛА И РАЗУМА
+          </h2>
+          <p class="coaches_note">
+            Наши инструктора сочетают свои знания и опыт, чтобы<br>
+            создать эффективные и интересные занятия, которые<br>
+            помогут вам укрепить мышечный корсет, достичь гибкости,<br>
+            улучшить осанку и физическую форму.
+          </p>
+        </div>
+
+        <div class="coaches_inner">
+          <div class="coaches_left">
+            <div class="coaches_main_photo">
+              <img class="coaches_main_img" src="assets/coach_main_irina.jpg" alt="Ирина Беляева">
+            </div>
+          </div>
+          <div class="coaches_center">
+            <div class="coaches_card" id="coaches_card">
+              <h3 class="coaches_name" id="coaches_name">Ирина Беляева</h3>
+              <p class="coaches_text" id="coaches_text">
+                Йога-инструктор с образованием по специальности
+                “Физическая культура и спорт”, имеет сертификат
+                международного уровня и пять лет практического опыта.
+              </p>
+            </div>
+          </div>
+          <div class="coaches_right">
+            <div class="coaches_slider">
+              <div class="coaches_preview_list" id="coaches_preview_list">
+                <button class="coaches_preview" type="button" data-trainer="0" aria-label="Выбрать тренера">
+                  <img class="coaches_preview_img" src="assets/coach_preview_anna.jpg" alt="Анна Беляева">
+                  <span class="coaches_preview_name">Анна Беляева</span>
+                </button>
+                <button class="coaches_preview" type="button" data-trainer="1" aria-label="Выбрать тренера">
+                  <img class="coaches_preview_img" src="assets/coach_preview_ekaterina.jpg" alt="Екатерина Волкова">
+                  <span class="coaches_preview_name">Екатерина Волкова</span>
+                </button>
+                <button class="coaches_preview" type="button" data-trainer="2" aria-label="Выбрать тренера">
+                  <img class="coaches_preview_img" src="assets/coach_preview_maria.jpg" alt="Мария Смирнова">
+                  <span class="coaches_preview_name">Мария Смирнова</span>
+                </button>
+              </div>
+              <div class="coaches_slider_bottom">
+                <div class="coaches_controls">
+                  <button class="coaches_arrow coaches_arrow_prev" type="button" aria-label="Предыдущий тренер"></button>
+                  <button class="coaches_arrow coaches_arrow_next" type="button" aria-label="Следующий тренер"></button>
+                </div>
+                <div class="coaches_progress">
+                  <div class="coaches_progress_fill" id="coaches_progress_fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="reviews_header">
+                <h2 class="reviews_title">
+                    НАШИ ДОВОЛЬНЫЕ<br>
+                    КЛИЕНТЫ
+                </h2>
+                <button class="reviews_button" type="button">
+                    ОСТАВИТЬ ОТЗЫВ
+                </button>
+            </div>
+            <div class="reviews_inner">
+                <div class="reviews_slider" aria-label="Отзывы клиентов">
+                    <ul class="reviews_list" id="reviews_list">
+                        <li class="reviews_item">
+                            <article class="reviews_card reviews_card_active">
+                                <img class="reviews_card_icon" src="assets/review_pose_1.svg" alt="" aria-hidden="true">
+                                <h3 class="reviews_card_name">Елена Смирнова</h3>
+                                <span class="reviews_card_line" aria-hidden="true"></span>
+                                <p class="reviews_card_text">
+                                    Я уже несколько месяцев занимаюсь в этой студии, очень довольна результатами. Йога,
+                                    пилатес и стретчинг помогли мне укрепить мышцы, улучшить гибкость и научиться
+                                    контролировать свое дыхание. Инструкторы здесь очень опытные, всегда готовы помочь.
+                                    Рекомендую студию всем, кто ищет место для занятий йогой и пилатесом.
+                                </p>
+                                <div class="reviews_card_bottom">
+                                    <a class="reviews_card_more" href="#" type="button">Подробнее</a>
+                                    <time class="reviews_card_date" datetime="2023-09-01">01.09.2023</time>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="reviews_item">
+                            <article class="reviews_card">
+                                <img class="reviews_card_icon" src="assets/review_pose_2.svg" alt="" aria-hidden="true">
+                                <h3 class="reviews_card_name">Попова Алиса</h3>
+                                <span class="reviews_card_line" aria-hidden="true"></span>
+                                <p class="reviews_card_text">
+                                    Мне очень нравится заниматься в студии йоги и пилатеса! Здесь работают опытные
+                                    инструкторы, которые всегда готовы помочь и подсказать, если что-то не получается.
+                                    Кроме того, атмосфера в студии очень дружелюбная и позитивная. Я чувствую, что мое тело
+                                    становится более гибким и сильным с каждым занятием.
+                                </p>
+                                <div class="reviews_card_bottom">
+                                    <a class="reviews_card_more" href="#">Подробнее</a>
+                                    <time class="reviews_card_date" datetime="2023-09-01">01.09.2023</time>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                    <div class="reviews_slider_bottom">
+                        <div class="reviews_controls">
+                            <button class="reviews_arrow reviews_arrow_prev" type="button" aria-label="Предыдущий отзыв"></button>
+                            <button class="reviews_arrow reviews_arrow_next" type="button" aria-label="Следующий отзыв"></button>
+                        </div>
+                        <div class="reviews_progress" aria-hidden="true">
+                            <div class="reviews_progress_fill" id="reviews_progress_fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="connection" class="connection">
+      <div class="container">
+        <div class="connection_header">
+          <h2 class="connection_title">ВСЕГДА НА СВЯЗИ С КЛИЕНТОМ</h2>
+        </div>
+        <div class="connection_inner">
+          <div class="connection_accordion" id="connection_accordion">
+            <div class="connection_item connection_item_active">
+              <button class="connection_question" type="button">
+                <span class="connection_question_text">Какой у вас график работы?</span>
+                <span class="connection_icon">+</span>
+              </button>
+              <div class="connection_answer">
+                <p>Мы работаем с 8:00 до 22:00 ежедневно, включая выходные дни.</p>
+              </div>
+            </div>
+            <div class="connection_item">
+              <button class="connection_question" type="button">
+                <span class="connection_question_text">Можно ли перенести занятие?</span>
+                <span class="connection_icon">+</span>
+              </button>
+              <div class="connection_answer">
+                <p>Да, вы можете перенести занятие, уведомив нас за 4 часа до начала.</p>
+              </div>
+            </div>
+            <div class="connection_item">
+              <button class="connection_question" type="button">
+                <span class="connection_question_text">Какая форма одежды требуется?</span>
+                <span class="connection_icon">+</span>
+              </button>
+              <div class="connection_answer">
+                <p>Рекомендуем удобную спортивную одежду, не сковывающую движения.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="map" class="contacts">
+        <div class="container">
+            <div class="contacts_header">
+                <h2 class="contacts_title">НАС МОЖНО НАЙТИ</h2>
+                <form class="contacts_form" action="#" method="post">
+                    <label class="contacts_field">
+                        <span class="contacts_label">Имя</span>
+                        <input class="contacts_input" type="text" name="name" placeholder="" autocomplete="name">
+                    </label>
+                    <label class="contacts_field">
+                        <span class="contacts_label">Номер телефона</span>
+                        <input class="contacts_input" type="tel" name="phone" placeholder="" autocomplete="tel">
+                    </label>
+                    <label class="contacts_policy">
+                        <input class="contacts_checkbox" type="checkbox" name="policy" required>
+                        <span class="contacts_policy_text">Принимаю условия политики конфиденциальности</span>
+                    </label>
+                    <button class="contacts_button" type="submit">ОТПРАВИТЬ</button>
+                </form>
+            </div>
+            <div class="contacts_map">
+                <img class="contacts_map_image" src="assets/map.png" alt="Карта: г. Томск, Варшавское шоссе 26">
+                <div class="contacts_card">
+                    <ul class="contacts_info">
+                        <li class="contacts_info_item">
+                            <span class="contacts_info_icon contacts_info_icon_phone" aria-hidden="true"></span>
+                            <a class="contacts_info_link" href="tel:+79244447777">+7 (924) 444-77-77</a>
+                        </li>
+                        <li class="contacts_info_item">
+                            <span class="contacts_info_icon contacts_info_icon_location" aria-hidden="true"></span>
+                            <span class="contacts_info_text">г. Томск, Варшавское шоссе 26</span>
+                        </li>
+                        <li class="contacts_info_item">
+                            <span class="contacts_info_icon contacts_info_icon_email" aria-hidden="true"></span>
+                            <a class="contacts_info_link" href="mailto:balans@mail.ru">balans@mail.ru</a>
+                        </li>
+                    </ul>
+                    <div class="contacts_social">
+                        <a class="contacts_social_link" href="#" aria-label="Мы ВКонтакте">
+                            <span class="contacts_social_icon contacts_social_icon_vk" aria-hidden="true"></span>
+                        </a>
+                        <a class="contacts_social_link" href="#" aria-label="Мы в WhatsApp">
+                            <span class="contacts_social_icon contacts_social_icon_whatsapp" aria-hidden="true"></span>
+                        </a>
+                        <a class="contacts_social_link" href="#" aria-label="Мы в Telegram">
+                            <span class="contacts_social_icon contacts_social_icon_telegram" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer_top">
+                <div class="footer_contacts">
+                    <p class="footer_contacts_item">Адрес: г. Томск, Варшавское шоссе 26</p>
+                    <p class="footer_contacts_item">
+                        Tel:
+                        <a class="footer_link" href="tel:+79244447777">+7 (924) 444-77-77</a>
+                    </p>
+                    <p class="footer_contacts_item">
+                        Email:
+                        <a class="footer_link" href="mailto:balans@mail.ru">balans@mail.ru</a>
+                    </p>
+                </div>
+                <nav class="footer_nav" aria-label="Навигация в подвале">
+                  <ul class="footer_nav_list">
+                    <li><a class="footer_nav_link" href="#home">Главная</a></li>
+                    <li><a class="footer_nav_link" href="#directions">Направления</a></li>
+                    <li><a class="footer_nav_link" href="#prices">Прайс</a></li>
+                    <li><a class="footer_nav_link" href="#schedule">Расписание</a></li>
+                    <li><a class="footer_nav_link" href="#coaches">Эксперты</a></li>
+                    <li><a class="footer_nav_link" href="#reviews">Отзывы</a></li>
+                    <li><a class="footer_nav_link" href="#connection">FAQ</a></li>
+                    <li><a class="footer_nav_link" href="#map">Контакты</a></li>
+                  </ul>
+                </nav>
+                <div class="footer_social">
+                    <a class="footer_social_link" href="#" aria-label="ВКонтакте">
+                        <img src="assets/footer_vk.svg" alt="" aria-hidden="true">
+                    </a>
+                    <a class="footer_social_link" href="#" aria-label="WhatsApp">
+                        <img src="assets/footer_whatsapp.svg" alt="" aria-hidden="true">
+                    </a>
+                    <a class="footer_social_link" href="#" aria-label="Telegram">
+                        <img src="assets/footer_telegram.svg" alt="" aria-hidden="true">
+                    </a>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <a class="footer_policy_left" href="#">
+                    Согласие на обработку персональных данных
+                </a>
+                <a class="footer_logo" href="#home" aria-label="BALANCE — на главную">
+                    <img
+                        class="footer_logo_icon"
+                        src="assets/logo_mark.svg"
+                        alt=""
+                        aria-hidden="true"
+                        width="86"
+                        height="86"
+                    >
+                    <span class="footer_logo_text">BALANCE</span>
+                </a>
+                <a class="footer_policy_right" href="#">
+                    Политика конфиденциальности
+                </a>
+            </div>
+        </div>
+    </footer>
+  </main>
+
+  <div class="modal_overlay" id="modal_overlay">
+    <div class="modal" id="modal">
+      <button class="modal_close" type="button" aria-label="Закрыть">×</button>
+      <div class="modal_header">
+        <h3 class="modal_title">Запись на занятие</h3>
+      </div>
+      <form class="modal_form" id="modal_form">
+        <div class="modal_info">
+          <div class="modal_info_item">
+            <span class="modal_info_label">Занятие:</span>
+            <span class="modal_info_value" id="modal_class_name">Хатха-йога</span>
+          </div>
+          <div class="modal_info_item">
+            <span class="modal_info_label">Время:</span>
+            <span class="modal_info_value" id="modal_class_time">8:00</span>
+          </div>
+          <div class="modal_info_item">
+            <span class="modal_info_label">Инструктор:</span>
+            <span class="modal_info_value" id="modal_class_trainer">Ирина Беляева</span>
+          </div>
+        </div>
+        <div class="modal_field">
+          <label class="modal_label" for="modal_phone">Номер телефона *</label>
+          <input 
+            class="modal_input" 
+            type="tel" 
+            id="modal_phone" 
+            name="phone" 
+            placeholder="+7 (___) ___-__-__"
+            required
+          >
+          <div class="modal_error" id="modal_phone_error"></div>
+        </div>
+        <div class="modal_field">
+          <label class="modal_label" for="modal_name">Ваше имя</label>
+          <input 
+            class="modal_input" 
+            type="text" 
+            id="modal_name" 
+            name="name" 
+            placeholder="Иван Иванов"
+          >
+        </div>
+        <div class="modal_agreement">
+          <label class="modal_checkbox_label">
+            <input 
+              class="modal_checkbox" 
+              type="checkbox" 
+              name="agreement" 
+              required
+            >
+            <span class="modal_checkbox_text">
+              Я согласен на обработку персональных данных
+            </span>
+          </label>
+        </div>
+        <button class="modal_submit" type="submit">ЗАПИСАТЬСЯ</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

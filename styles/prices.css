@@ -1,0 +1,127 @@
+.prices {
+    padding: 120px 0;
+    background-color: var(--color-bg);
+}
+
+.prices_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.prices_title {
+    font-family: var(--font-accent);
+    font-size: 64px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--color-dark);
+}
+
+.prices_note {
+    max-width: 350px;
+    text-align: right;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgba(31, 31, 31, 0.6);
+}
+
+.prices_note p {
+    margin-bottom: 10px;
+}
+
+.prices_inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.prices_column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price_card {
+    flex: 1; 
+    border: 1px solid rgba(31, 31, 31, 0.2);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240px;
+    transition: border-color 0.3s;
+}
+
+.price_card:hover {
+    border-color: var(--color-dark);
+}
+
+.price_meta {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.price_meta_number {
+    font-family: var(--font-accent);
+    font-size: 64px;
+    line-height: 0.8;
+}
+
+.price_meta_text {
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-top: 5px;
+    color: rgba(31, 31, 31, 0.6);
+    letter-spacing: 0.05em;
+}
+
+.price_value {
+    font-family: var(--font-accent);
+    font-size: 40px;
+    line-height: 1;
+    margin-top: auto; 
+    padding-top: 20px;
+}
+
+.price_divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(31, 31, 31, 0.2);
+    margin: 20px 0;
+}
+
+.price_description {
+    font-size: 16px;
+    color: rgba(31, 31, 31, 0.6);
+}
+
+.price_subvalue {
+    font-size: 16px;
+    color: rgba(31, 31, 31, 0.6);
+}
+
+.prices_button {
+    flex: 1; 
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--color-dark);
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prices_button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}

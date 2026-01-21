@@ -1,0 +1,63 @@
+:root {
+  --font-main: 'Manrope', sans-serif;
+  --font-accent: 'Tenor Sans', sans-serif;
+  
+  --color-bg: #F5F2ED;
+  --color-dark: #1F1F1F;
+  --color-white: #FFFFFF;
+  --color-accent: #B5C1B4;
+  --color-green: #899879; 
+  
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  font-family: var(--font-main);
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-dark);
+}
