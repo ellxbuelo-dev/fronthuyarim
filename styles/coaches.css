@@ -40,16 +40,15 @@
 }
 
 .coaches_main_photo {
-  width: 440px;
-  height: 560px;
-  border-radius: 220px 220px 0 0; 
+  width: 387px;
+  border-radius: 191px 0 0 0; 
   overflow: hidden;
   background-color: #d9d9d9; 
 }
 
 .coaches_main_img {
-  width: 100%;
-  height: 100%;
+  width: 387px;
+  height: 379px;
   object-fit: cover;
 }
 
