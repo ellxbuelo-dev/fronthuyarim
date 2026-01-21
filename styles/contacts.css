@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
 .contacts {
   padding: 120px 0;
   background-color: var(--color-bg);
@@ -5,10 +7,11 @@
 
 .contacts_header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column; /* Меняем на column */
+  gap: 40px; /* Отступ между заголовком и формой */
   margin-bottom: 60px;
 }
+
 
 .contacts_title {
   font-family: 'New Yorker', serif;
@@ -18,28 +21,35 @@
   font-weight: 400;
   color: #637D61;
   margin: 0;
+  width: 100%; /* Занимает всю ширину */
 }
 
 .contacts_form {
-  width: 440px;
+  width: 100%; /* Вся ширина контейнера */
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-direction: row; /* Горизонтальное расположение */
+  flex-wrap: wrap; /* Перенос на новую строку если нужно */
+  align-items: flex-end; /* Выравниваем по низу */
+  gap: 20px; /* Отступ между элементами формы */
 }
 
 .contacts_field {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  position: relative;
+  flex: 1; /* Занимают доступное пространство */
+  min-width: 200px; /* Минимальная ширина поля */
 }
 
 .contacts_label {
+  display: none;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: rgba(31, 31, 31, 0.6);
+  white-space: nowrap;
 }
+
 
 .contacts_input {
   width: 100%;
@@ -51,7 +61,7 @@
   font-size: 16px;
   color: var(--color-dark);
   transition: border-color 0.3s ease;
-  border-radius: 0; 
+  border-radius: 0;
 }
 
 .contacts_input:focus {
@@ -60,15 +70,24 @@
 }
 
 .contacts_input::placeholder {
+  color: rgba(31, 31, 31, 0.6); /* Цвет как был у лейбла */
+  opacity: 1; /* Делаем видимым */
+  font-size: 16px; /* Размер текста */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.contacts_input:focus::placeholder {
   opacity: 0;
 }
+
 
 .contacts_policy {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 10px;
+  flex: 0 0 auto; /* Не растягивается */
+  margin-top: 0; /* Убираем margin-top */
   cursor: pointer;
+  min-width: 250px; /* Минимальная ширина для чекбокса */
 }
 
 .contacts_checkbox {
@@ -104,22 +123,28 @@
   color: rgba(31, 31, 31, 0.6);
   line-height: 1.4;
 }
-
 .contacts_button {
-  margin-top: 10px;
-  padding: 20px;
-  background-color: transparent;
-  border: 1px solid var(--color-dark);
+  padding: 24px 56px; /* Top/Bottom: 24px, Left/Right: 56px */
+  background-color: #789776;
   font-family: var(--font-main);
+  border-radius: 52.99px;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-dark);
+  color: #FEFBF7;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex: 0 0 auto;
+  height: 55px; /* В макете Height: 55px */
+  width: 285px; /* В макете Width: Fixed (285px) */
+  margin-top: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Чтобы padding не увеличивал размер кнопки */
 }
-
 .contacts_button:hover {
   background-color: var(--color-dark);
   color: var(--color-white);
@@ -144,9 +169,8 @@
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: var(--color-white);
+  background-color: #789776;
   padding: 40px;
-  border-radius: 20px;
   width: 400px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
@@ -154,6 +178,7 @@
 .contacts_info {
   display: flex;
   flex-direction: column;
+  margin-left: -35px;
   gap: 25px;
   margin-bottom: 40px;
 }
@@ -167,6 +192,7 @@
 .contacts_info_icon {
   width: 24px;
   height: 24px;
+  color:#FEFBF7;
   flex-shrink: 0;
   background-position: center;
   background-repeat: no-repeat;
@@ -188,7 +214,8 @@
 .contacts_info_link,
 .contacts_info_text {
   font-size: 18px;
-  color: var(--color-dark);
+  color: #FEFBF7;;
+  font-family: Raleway;
   line-height: 1.4;
   transition: opacity 0.3s;
 }
