@@ -32,50 +32,67 @@
 
 .directions_inner {
   display: grid;
-  grid-template-columns: 300px 440px 1fr;
+  grid-template-columns: 360px 440px 1fr; /* 360px для кнопок */
   gap: 60px;
-  align-items: center;
+  align-items: start;
 }
 
 .directions_tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 15px;
+  width: 100%;
 }
 
+
 .directions_tab {
-  font-family: var(--font-accent);
-  font-size: 28px;
-  color: rgba(31, 31, 31, 0.3); 
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-dark);
+  
+  /* Стили кнопки */
   background: none;
-  border: none;
+  border: 1px solid #D2CFC7;
+  border-radius: 30px;
   cursor: pointer;
-  text-align: left;
+  padding: 16px 32px; /* Top/Bottom: 16px, Left/Right: 32px */
+  /* Размеры и отступы */
+  height: 50px;
+  
+  /* Выравнивание текста */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  /* Transition */
   transition: all 0.3s ease;
-  padding: 0;
-  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  box-sizing: border-box; /* Чтобы padding не вылазил за границы */
+  white-space: normal; /* Разрешить перенос текста */
+  word-break: break-word; /* Переносить длинные слова */
 }
 
 .directions_tab:hover {
-  color: rgba(31, 31, 31, 0.6);
+  background-color: rgba(210, 207, 199, 0.1); /* Легкий фон при наведении */
+  border-color: var(--color-dark); /* Темнее граница */
 }
 
 .directions_tab.directions_tab_active {
-  color: var(--color-dark);
-  font-size: 32px; 
-  transform: translateX(10px); 
+  background-color: var(--color-green); /* Зеленый фон */
+  color: var(--color-white); /* Белый текст */
+  border-color: var(--color-green); /* Зеленая граница */
+  
+  /* Убираем transform и before из старого стиля */
+  transform: none;
+  font-size: 16px; /* Такой же размер как у неактивных */
 }
 
 .directions_tab.directions_tab_active::before {
-  content: '';
-  position: absolute;
-  left: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 1px;
-  background-color: var(--color-dark);
+  display: none; /* Убираем линию слева */
 }
 
 .directions_visual {

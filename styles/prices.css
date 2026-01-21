@@ -1,127 +1,267 @@
+:root {
+  --bg: #FEFBF7;
+  --text: #5f5f5a;
+  --muted: #7a7a73;
+  --line: rgba(95, 95, 90, .35);
+  --green: #789776;
+  --price: #5B6158;
+}
+
 .prices {
-    padding: 120px 0;
-    background-color: var(--color-bg);
+  background: var(--bg);
+  padding: 80px 0;
+  color: var(--text);
 }
 
-.prices_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 60px;
+.pricesBox {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
 }
 
-.prices_title {
-    font-family: var(--font-accent);
-    font-size: 64px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: var(--color-dark);
+.pricesTop {
+  display: grid;
+  grid-template-columns: 530px 383px;
+  column-gap: 80px;
+  margin-bottom: 56px;
 }
 
-.prices_note {
-    max-width: 350px;
-    text-align: right;
-    font-size: 16px;
-    line-height: 1.4;
-    color: rgba(31, 31, 31, 0.6);
+.pricesTitle {
+  font-family: 'New Yorker', serif;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: 0.7%;
+  font-weight: 400;
+  color: #637D61;
+  margin: 0;
 }
 
-.prices_note p {
-    margin-bottom: 10px;
+.pricesNote {
+  width: 383px;
+  margin-top: 9px;
+  margin-left: 260px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  line-height: 125%;
 }
 
-.prices_inner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.pricesNote p {
+  margin: 0 0 18px;
 }
 
-.prices_column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.pricesNote p:last-child {
+  margin-bottom: 0;
 }
 
-.price_card {
-    flex: 1; 
-    border: 1px solid rgba(31, 31, 31, 0.2);
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 240px;
-    transition: border-color 0.3s;
+.pricesStrong {
+  font-weight: 600;
 }
 
-.price_card:hover {
-    border-color: var(--color-dark);
+.pricesCols {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 90px;
 }
 
-.price_meta {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
+.pricesSolo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.price_meta_number {
-    font-family: var(--font-accent);
-    font-size: 64px;
-    line-height: 0.8;
+.pricesSoloCap {
+  height: 32px;
+  margin-bottom: 10px;
 }
 
-.price_meta_text {
-    font-size: 12px;
-    text-transform: uppercase;
-    line-height: 1.2;
-    margin-top: 5px;
-    color: rgba(31, 31, 31, 0.6);
-    letter-spacing: 0.05em;
+.pricesPriceWrap {
+  width: fit-content;
 }
 
-.price_value {
-    font-family: var(--font-accent);
-    font-size: 40px;
-    line-height: 1;
-    margin-top: auto; 
-    padding-top: 20px;
+.pricesPriceBig {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 100%;
+  letter-spacing: 0.007em;
+  color: var(--price);
+  height: 32px;
+  display: flex;
+  align-items: flex-end;
 }
 
-.price_divider {
-    width: 100%;
-    height: 1px;
-    background-color: rgba(31, 31, 31, 0.2);
-    margin: 20px 0;
+.pricesLineShort {
+  width: 115px;
+  height: 1px;
+  background: var(--line);
+  margin: 12px 0 14px;
 }
 
-.price_description {
-    font-size: 16px;
-    color: rgba(31, 31, 31, 0.6);
+.pricesLineFull {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+  margin: 0;
 }
 
-.price_subvalue {
-    font-size: 16px;
-    color: rgba(31, 31, 31, 0.6);
+.pricesSub {
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  color: var(--muted);
 }
 
-.prices_button {
-    flex: 1; 
-    width: 100%;
-    background-color: transparent;
-    border: 1px solid var(--color-dark);
-    font-family: var(--font-main);
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-dark);
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.pricesBtn {
+  width: 240px;
+  height: 55px;
+  padding: 24px 56px;
+  border: none;
+  border-radius: 52.99px;
+  background: #789776;
+  color: #fff;
+  display: flex;
+  margin-top: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 13.25px;
+  font-family: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
-.prices_button:hover {
-    background-color: var(--color-dark);
-    color: var(--color-white);
+.pricesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 110px;
+  row-gap: 42px;
 }
+
+.pricesItem {
+  width: 346px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pricesRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.pricesCap {
+  display: flex;
+  gap: 10px;
+  font-family: "Raleway", sans-serif;
+  color: var(--muted);
+}
+
+.pricesNum {
+  font-size: 28px;
+  line-height: 1;
+  color: var(--text);
+}
+
+.pricesText {
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.pricesPrice {
+  width: 145px;
+  height: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 1;
+  letter-spacing: 0.007em;
+  color: #5B6158;
+  font-variant-numeric: proportional-nums lining-nums;
+  white-space: nowrap;
+}
+
+.pricesBottom {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.pricesGreen {
+  color: #789776;
+  font-size: 18px;
+}
+
+.pricesPer {
+  width: 105px;
+  height: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 1;
+  letter-spacing: 0.007em;
+  color: #789776;
+  font-variant-numeric: lining-nums proportional-nums;
+  white-space: nowrap;
+}
+
+.pricesRight {
+  margin-left: auto;
+}
+
+.pricesHintRow {
+  align-items: flex-start;
+}
+
+.pricesHint {
+  margin-left: auto;
+  max-width: 170px;
+  font-size: 12px;
+  color: var(--green);
+  line-height: 1.2;
+}
+
+@media (max-width: 1200px) {
+  .pricesBox {
+    padding: 0 24px;
+  }
+  .pricesTop {
+    grid-template-columns: 1fr;
+  }
+
+  .pricesTitle {
+    width: auto;
+    height: auto;
+  }
+
+  .pricesCols {
+    grid-template-columns: 1fr;
+  }
+
+  .pricesList {
+    grid-template-columns: 1fr;
+  }
+
+  .pricesNote {
+    margin-left: 0;
+  }
+
+  .pricesSoloCap {
+    display: none;
+  }
+}
+
+
