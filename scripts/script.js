@@ -99,6 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
         statusFill.style.width = `${((currentSlide + 1) / slides.length) * 100}%`;
     }
 
+    
+
     document.getElementById('prevBtn').addEventListener('click', () => {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         updateSlide();
